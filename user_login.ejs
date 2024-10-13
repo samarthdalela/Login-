@@ -4,15 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/styles/bootstrap (2).css">
+    <link rel="stylesheet" href="/styles/employee.css">
 </head>
 <body>
-    <form action="submit" method="post">
-        <input type="text" placeholder="First Name" name="Fname">
-        <input type="text" placeholder="Last Name" name="Lname">
-        <input type="email" placeholder="Email" name="email">
-        <input type="number" placeholder="Phone Number" name="Phone">
-<input type="submit">
+   
+        
+        
+       
+        
 
-    </form>
+
+    <!-- <form action="submit" method="post">
+    <div class="form_contaier">
+        <div class="box box6"><h1>Employee Details</h1></div>
+        <div class="box box1"><input type="text" placeholder="First Name" name="Fname"></div>
+        <div class="box box2"><input type="text" placeholder="Last Name" name="Lname"></div>
+        <div class="box box3"> <input type="email" placeholder="Email" name="email"></div>
+        <div class="box box4"><input type="tel" placeholder="Phone Number" name="Phone"></div>
+        <div class="box box5"><input type="submit"></div>
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+   </div> </form> -->
+
+
+<main>
+    <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary col-md-8 mx-auto" method="post" action="/submit">
+        <h1>Employee</h1>
+        <!-- Name Field -->
+        <div class="form-floating mb-3" >
+          <input type="text" class="form-control" id="floatingName" placeholder="Name" name="FirstName" required>
+          <label for="floatingName">First Name</label>
+        </div>
+      
+        <!-- Last Name Field -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingLastName" placeholder="Last Name" name="LastName" required>
+          <label for="floatingLastName">Last Name</label>
+        </div>
+      
+        <!-- Email Field -->
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingEmail" placeholder="Email" name="Email" required>
+          <label for="floatingEmail">Email</label>
+        </div>
+      
+        <!-- Phone Number Field -->
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="floatingPhone" placeholder="Phone Number" name="Phone" required>
+          <label for="floatingPhone">Phone Number</label>
+        </div>
+      
+        <!-- Address Field -->
+        <div class="form-floating mb-3">
+          <textarea class="form-control" id="floatingAddress" placeholder="Address" name="Address" style="height: 100px;" required></textarea>
+          <label for="floatingAddress">Address</label>
+        </div>
+      
+        <!-- Gender Field -->
+        <div class="mb-3">
+          <label class="form-label">Gender</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Gender" id="genderMale" value="Male" required>
+            <label class="form-check-label" for="genderMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Gender" id="genderFemale" value="Female" required>
+            <label class="form-check-label" for="genderFemale">Female</label>
+          </div>
+        </div>
+      
+        <!-- Department Field -->
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingDepartment" name="Department" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="HR">Human Resources</option>
+            <option value="IT">Information Technology</option>
+            <option value="Finance">Finance</option>
+            <option value="Sales">Sales</option>
+            <option value="Marketing">Marketing</option>
+          </select>
+          <label for="floatingDepartment">Department</label>
+        </div>
+      
+        <!-- State Field -->
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingState" name="State" required>
+            <option value="" disabled selected>Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Chandigarh">Chandigarh</option>
+          </select>
+          <label for="floatingState">State</label>
+        </div>
+      
+        
+      
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+      
+</main>
 </body>
 </html>

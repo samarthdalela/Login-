@@ -3,7 +3,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import Users from "./mongo_employee_schema.js"; // Correct extension to .js
+import Users from "./mongo_employee_schema.js"; 
 import Admins from "./mogo_admin_schema.js";
 const app = express();
 const port = 3000;
@@ -15,14 +15,18 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.render(__dirname + "/index.ejs");
 });
-
+app.get("/user_login",(req,res)=>{
+  res.render(__dirname+"/user_login.ejs")
+})
 app.get("/admin_login", (req, res) => {
   res.render(__dirname + "/admin.ejs");
 });
 
 app.post("/submit", async (req, res) => {
-  const { Fname, Lname, email, Phone } = req.body;
-  const user = new Users({ Fname, Lname, email, Phone });
+  const { FirstName,LastName,Email,Phone,Address,Gender,Department,State } = req.body;
+  console.log(req.body)
+  const user = new Users({ FirstName,LastName,Email,Phone,Address,Gender,Department,State,
+  });
   try {
     await user.save(); // Save user data to the database
     console.log(user);
@@ -46,8 +50,7 @@ app.post("/details", async (req, res) => {
   const b = req.body.password;
 
   try {
-    // const d = db.collection('admin');
-    // const a = await c.find().toArray();
+
 
     const admin_data = await Admins.find(); // Fetch all admins
 

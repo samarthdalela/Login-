@@ -5,10 +5,14 @@ const app = express();
 
 // Define the schema for the employee collection
 const userSchema = new mongoose.Schema({
-    Fname: String,
-    Lname: String,
-    email: String,
-    Phone: Number,
+  FirstName:String,
+  LastName:String,
+  Email:String,
+  Phone:Number,
+  Address:String,
+  Gender:String,
+  Department:String,
+  State:String,
   });
 
   const Users = mongoose.model("data", userSchema);

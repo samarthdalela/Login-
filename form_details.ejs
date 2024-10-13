@@ -1,10 +1,14 @@
 <h1>hhhhhhhh</h1>
 <% users.forEach(function(user) { %>
-    <div style="margin-bottom: 20px;">
-      <p><strong>First Name:</strong> <%= user.Fname %></p>
-      <p><strong>Last Name:</strong> <%= user.Lname %></p>
-      <p><strong>Email:</strong> <%= user.email %></p>
-      <p><strong>Phone:</strong> <%= user.Phone %></p>
-    </div>
+  <div style="margin-bottom: 20px;">
+    <p><strong>First Name:</strong> <%= user.FirstName %></p>
+    <p><strong>Last Name:</strong> <%= user.LastName %></p>
+    <p><strong>Email:</strong> <%= user.Email %></p>
+    <p><strong>Phone:</strong> <%= user.Phone %></p>
+    <p><strong>Address:</strong> <%= user.Address %></p>
+    <p><strong>Gender:</strong> <%= user.Gender %></p>
+    <p><strong>Department:</strong> <%= user.Department %></p>
+    <p><strong>State:</strong> <%= user.State %></p>
+  </div>
     <hr> <!-- Adds a horizontal line between users -->
   <% }) %>
