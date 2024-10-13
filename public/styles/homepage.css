@@ -1,0 +1,10 @@
+body{background-color: aquamarine;}
+.container_header{
+    display: flex;
+    justify-content: space-between;
+}
+.box2{
+    display: flex;
+    width: 20vw;
+    justify-content: space-evenly;
+}

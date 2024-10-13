@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug with Nodemon",
+            "runtimeExecutable": "nodemon",  // Use nodemon as the runtime
+            "program": "${workspaceFolder}/yourEntryFile.js", // Replace with your entry file, e.g., app.js or server.js
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "outFiles": [
+              "${workspaceFolder}/**/*.js" // Allows debugging in all .js files
+            ],
+            "env": {
+              "NODE_ENV": "development" // Optional: set environment variables
+            }
+          }
+    ]
+}
